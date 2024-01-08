@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags, Bootstrap CSS, and other head elements -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <title>Stock Portfolio</title>
+</head>
+<body>
+    <!-- Navigation bar and header -->
+
+    <main class="container my-4">
+        <h2>Portfolio</h2>
+        {% if portfolio %}
+            <table class="table table-bordered table-hover">
+                <thead class="thead-light">
+                    <tr>
+                        <th>Symbol</th>
+                        <th>Shares</th>
+                        <th>Price</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for stock in portfolio %}
+                        <tr>
+                            <td>{{ stock.symbol }}</td>
+                            <td>{{ stock.shares }}</td>
+                            <td>{{ stock.price | usd }}</td> <!-- Assuming you have a USD formatting filter -->
+                            <td>{{ stock.total | usd }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <p>No stocks in your portfolio yet.</p>
+        {% endif %}
+
+        <h3>Cash Balance: {{ cash | usd }}</h3>
+        <h3>Grand Total: {{ grand_total | usd }}</h3>
+    </main>
+
+    <!-- Footer -->
+</body>
+</html>
