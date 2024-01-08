@@ -1,0 +1,128 @@
+/* Basic Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+nav .navbar-brand {
+    font-size: xx-large;
+}
+
+nav .navbar-brand .blue { color: #537fbe; }
+nav .navbar-brand .red { color: #ea433b; }
+nav .navbar-brand .yellow { color: #f5b82e; }
+nav .navbar-brand .green { color: #2e944b; }
+
+/* Container */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Header */
+header {
+    padding: 20px 0;
+    background-color: #537fbe;
+    color: white;
+    text-align: center;
+}
+
+/* Main Area */
+main {
+    padding: 20px;
+    background: white;
+    margin-top: 20px;
+}
+
+/* Forms */
+form {
+    margin-top: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="password"],
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+form button {
+    width: 100%;
+    display: block;
+    padding: 10px;
+    background-color: #537fbe;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #2e944b;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+table th {
+    background-color: #f4f4f4;
+    text-align: left;
+}
+
+/* Alert Messages */
+.alert {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    color: white;
+}
+
+.alert-danger { background-color: #ea433b; }
+.alert-success { background-color: #2e944b; }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    nav, header, main {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
